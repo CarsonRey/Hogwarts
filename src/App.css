@@ -1,32 +1,123 @@
+/* html{
+  height: 100vh;
+} */
+html,body {padding:0; margin:0;}
+
 .App {
+  width: 100%;
+  height: 100vh;
+
+}
+
+.InfoContainer{
+  width:80%;
+  height: 100%;
+  float: left;
+}
+
+.addNewCharacterForm{
+  border: 1px dashed black;
+  width:100%;
+  height: 323px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 40%;
+}
+
+input{
+  display: block;
+}
+
+select {
+  width: 100%;
+}
+
+.HouseContainer{
+  width:100%;
+  height: 415px;
+  background: red;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* float: left; */
+  overflow: scroll;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.house{
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 100%;
+  white-space:nowrap;
+  width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.name{
+  text-align: center;
+}
+
+.charInHouse{
+  position: relative;
+}
+
+.stats{
+  border-radius: 15px;
+  background-color:rgba(255, 255, 255, 0.65);
+  position: absolute;
+  display: block;
+  top:145px;
+  left:35px;
+}
+
+.CharacterContainer{
+  width: 20%;
+  height: 740px;
+  overflow: scroll;
+  text-align: center;
+  /* display: inline-block; */
+  float: left;
+}
+
+.character  {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  display: inline-block;
+
+}
+
+.HouseName{
+  font-weight: bold;
+  text-decoration: underline;
+  color: blue;
+}
+
+.HouseName:hover{
+  color:red;
+}
+
+.img{
+  width: 100%;
+}
+
+.search{
+  width:100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+.search input[type="text"]{
+  /* order:1; */
+  /* flex-grow: 1; */
+  /* position:fixed; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search input[type="submit"]{
+  /* float: left; */
+  /* order:2; */
+  /* flex-grow: 2; */
+  /* position:fixed; */
 }
