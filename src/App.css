@@ -17,7 +17,7 @@ html,body {padding:0; margin:0;}
 
 .addNewCharacterForm{
   border: 1px dashed black;
-  width:100%;
+  width:60%;
   height: 323px;
   display: flex;
   flex-wrap: wrap;

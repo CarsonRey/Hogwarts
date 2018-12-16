@@ -18,7 +18,6 @@ class Form extends Component{
   }
 
   storeInput = (e) => {
-    // console.log(e.target.value)
     this.setState({
       [e.target.name]: e.target.value
     })
@@ -33,14 +32,6 @@ class Form extends Component{
     e.preventDefault()
     let newChar = this.objectWithoutKey(this.state, 'searchInput')
     this.props.newCharacter(newChar)
-
-    // fetch('http://localhost:3001/potterstuff', {
-    //   method: "POST",
-    //   headers: {
-    //     'Content-Type': 'application/json'
-    //   },
-    //   body: JSON.stringify({name: this.state.name, age: this.state.age, house: this.state.house, role: this.state.role, image1: this.state.image1, image2: this.state.image2})
-    // })
   }
 
 
@@ -72,9 +63,7 @@ class Form extends Component{
 
   render(){
     return(
-
         this.props.context === "CharacterContainer" ? this.searchForm() : this.addNewCharacterForm()
-
     )
   }
 }

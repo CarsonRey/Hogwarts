@@ -1,20 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Character from '../Components/Character';
 import Form from '../Components/Form';
 
-class CharacterContainer extends Component{
+const CharacterContainer = (props) => {
 
-  render(){
-    let characters = this.props.characters.map(character => <Character context={this.props.context} updateCharacterHouse={this.props.updateCharacterHouse} key={character.image1} character={character}/>)
+    let characters = props.characters.map(character => <Character context={props.context} updateCharacterHouse={props.updateCharacterHouse} key={character.image1} character={character}/>)
     return(
       <div className="CharacterContainer">
         <Form
-          context="CharacterContainer" showFilteredCharacters={this.props.showFilteredCharacters}
+          context="CharacterContainer" showFilteredCharacters={props.showFilteredCharacters}
         />
         {characters}
       </div>
     )
   }
-}
+
 
 export default CharacterContainer;

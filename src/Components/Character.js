@@ -6,7 +6,6 @@ class Character extends Component{
     display: false,
     statsDisplay: false,
     houseDisplay: false,
-    house: this.props.character.house
   }
 
     changeDisplay = (e) => {
@@ -63,14 +62,6 @@ class Character extends Component{
       </select>
 
   }
-
-  // currentHouse = (house) => {
-  //   if ( this.props.character.house === house){
-  //     return "selected"
-  //   } else {
-  //     return ""
-  //   }
-  // }
 
   // otherHouses = () => {
   //   let houses = ["HufflePuff", "RavenClaw", "Gryffindor", "Slytherin"]
